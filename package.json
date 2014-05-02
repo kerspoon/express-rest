@@ -1,0 +1,25 @@
+{
+  "name": "express-rest",
+  "version": "0.0.0",
+  "description": "a tutorial for restful express with minimal boilerplate",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kerspoon/express-rest.git"
+  },
+  "keywords": [
+    "express",
+    "REST"
+  ],
+  "author": "James Brooks",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kerspoon/express-rest/issues"
+  },
+  "dependencies": {
+    "express": "~4.1.1"
+  }
+}
