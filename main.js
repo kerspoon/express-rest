@@ -4,7 +4,8 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var models = require('./models/main.js');
+var models = require('./model');
+var WebError = require('./errs').WebError;
 
 var app = express();
 
@@ -13,17 +14,6 @@ var app = express();
 */
 app.use(bodyParser());
 
-/*
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-  Create a custom error object that includes the HTML status code to return.
-*/
-function WebError(message, status) {
-    this.name = 'WebError';
-    this.status = status;
-    this.message = message;
-    this.stack = (new Error()).stack;
-}
-WebError.prototype = Error;
 
 /*
   any route with `model` param in it should grab the model and save it to the
